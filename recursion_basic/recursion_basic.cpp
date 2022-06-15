@@ -31,6 +31,19 @@ void out_5(int n, string prefix = "")
 }
 
 
+void out_6(int N, int K)
+{
+    int n = N;
+    int k = N - 1;
+    for (int i = 0; i < k; i++)
+    {
+        cout << N;
+        cout << k - i;
+        cout << " ";
+    }
+    if (K > 0)
+        out_6(n - 1, k - 1);
+}
 
 int main()
 {
@@ -44,6 +57,11 @@ int main()
 
     cout << endl;
     out_5(n);
+
+
+    int K;
+    cin >> K;
+    out_6(n, K);
 
     return 0;
 }
